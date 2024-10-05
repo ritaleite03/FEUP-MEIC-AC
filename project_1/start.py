@@ -1,7 +1,8 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
 import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
 
 # upload the datasets
 awards_players = pd.read_csv("data/awards_players.csv")
@@ -33,7 +34,31 @@ teams_coaches_merge = pd.merge(teams_coaches_merge, teams_post, on=['year', 'tmI
 teams_coaches_merge['W_post'] = teams_coaches_merge['W_post'].fillna(0)
 teams_coaches_merge['L_post'] = teams_coaches_merge['L_post'].fillna(0)
 
-# see which columns have Nan values
-rows_with_nan = teams_coaches_merge[teams_coaches_merge.isna().any(axis=1)]
-nan_columns = rows_with_nan.columns[rows_with_nan.isna().any()]
-print(rows_with_nan[nan_columns].head())
+# drop unnecessary columns
+teams_coaches_merge_without_playoffs = teams_coaches_merge.drop(columns=['firstRound', 'semis', 'finals', 'W_post', 'L_post', 'rank', 'post_wins_coaches', 'post_losses_coaches', 'confL', 'confW'])
+# Convert 'playoff' column to numeric
+teams_coaches_merge_without_playoffs['playoff'] = teams_coaches_merge_without_playoffs['playoff'].map({'Y': 1, 'N': 0})
+
+# Split training and testing data based on the year
+training_data = teams_coaches_merge_without_playoffs[teams_coaches_merge_without_playoffs['year'] < 10]
+testing_data = teams_coaches_merge_without_playoffs[teams_coaches_merge_without_playoffs['year'] == 10]
+
+# Drop the target column and apply one-hot encoding to the features
+X_train = pd.get_dummies(training_data.drop(columns=['playoff']), drop_first=True)
+y_train = training_data['playoff']
+
+X_test = pd.get_dummies(testing_data.drop(columns=['playoff']), drop_first=True)
+
+# Align the train and test sets
+X_train, X_test = X_train.align(X_test, join='left', axis=1, fill_value=0)
+
+# Create and train the Decision Tree model
+decision_tree = DecisionTreeClassifier(random_state=42)
+decision_tree.fit(X_train, y_train)
+
+# Make predictions on the test set
+y_pred = decision_tree.predict(X_test)
+
+# Evaluate the model's accuracy
+accuracy = accuracy_score(testing_data['playoff'], y_pred)
+print(f"Accuracy: {accuracy:.2f}")
