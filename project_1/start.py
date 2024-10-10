@@ -13,7 +13,7 @@ series_post = pd.read_csv("data/series_post.csv")
 teams_post = pd.read_csv("data/teams_post.csv")
 teams = pd.read_csv("data/teams.csv")
 
-# remove columns of the same value in every entry
+# remove columns that have the same value in every entry
 awards_players = awards_players.loc[:, awards_players.nunique() > 1]
 coaches = coaches.loc[:, coaches.nunique() > 1]
 players_teams = players_teams.loc[:, players_teams.nunique() > 1]
@@ -21,6 +21,19 @@ players = players.loc[:, players.nunique() > 1]
 series_post = series_post.loc[:, series_post.nunique() > 1]
 teams_post = teams_post.loc[:, teams_post.nunique() > 1]
 teams = teams.loc[:, teams.nunique() > 1]
+
+# change team ID because of the teams that changed their name
+mapTeam = {}
+for index, row in teams[['tmID', 'franchID']].iterrows():
+    mapTeam [row['tmID']] = row['franchID']
+
+coaches['tmID'] = coaches['tmID'].replace(mapTeam) 
+players_teams['tmID'] = players_teams['tmID'].replace(mapTeam) 
+series_post['tmIDWinner'] = series_post['tmIDWinner'].replace(mapTeam) 
+series_post['tmIDLoser'] = series_post['tmIDLoser'].replace(mapTeam) 
+teams_post['tmID'] = teams_post['tmID'].replace(mapTeam)
+teams['tmID'] = teams['tmID'].replace(mapTeam).drop(columns=['franchID'])
+
 
 # rename columns for merge
 coaches = coaches.rename(columns=lambda x: x + '_coaches' if x not in ['year', 'tmID'] else x)
@@ -35,7 +48,8 @@ teams_coaches_merge['W_post'] = teams_coaches_merge['W_post'].fillna(0)
 teams_coaches_merge['L_post'] = teams_coaches_merge['L_post'].fillna(0)
 
 # drop unnecessary columns
-teams_coaches_merge_without_playoffs = teams_coaches_merge.drop(columns=['firstRound', 'semis', 'finals', 'W_post', 'L_post', 'rank', 'post_wins_coaches', 'post_losses_coaches', 'confL', 'confW'])
+teams_coaches_merge_without_playoffs = teams_coaches_merge.drop(columns=['firstRound', 'semis', 'finals', 'W_post', 'L_post', 'rank', 'post_wins_coaches', 'post_losses_coaches'])
+
 # Convert 'playoff' column to numeric
 teams_coaches_merge_without_playoffs['playoff'] = teams_coaches_merge_without_playoffs['playoff'].map({'Y': 1, 'N': 0})
 
@@ -62,3 +76,23 @@ y_pred = decision_tree.predict(X_test)
 # Evaluate the model's accuracy
 accuracy = accuracy_score(testing_data['playoff'], y_pred)
 print(f"Accuracy: {accuracy:.2f}")
+
+# Extrair as importâncias das features
+feature_importances = decision_tree.feature_importances_
+
+# Criar um DataFrame para organizar as importâncias
+feature_importances_df = pd.DataFrame({
+    'Feature': X_train.columns,
+    'Importance': feature_importances
+})
+
+# Ordenar as features pela importância
+feature_importances_df = feature_importances_df.sort_values(by='Importance', ascending=False)
+
+# Exibir as 10 features mais importantes
+# print(feature_importances_df.head(10))
+# Visualizar as importâncias das features
+# plt.figure(figsize=(10, 6))
+# sns.barplot(x='Importance', y='Feature', data=feature_importances_df.head(10))
+# plt.title('Top 10 Most Important Features')
+# plt.show()
