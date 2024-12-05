@@ -13,7 +13,6 @@ aglerbr99w,2,MIN,12.0,20.0,0.0,0.0
 aglerbr99w,3,MIN,6.0,13.0,0.0,0.0
 aglerbr99w,9,SEA,22.0,12.0,1.0,2.0
 aglerbr99w,10,SEA,20.0,14.0,1.0,2.0
-aglerbr99w,11,SEA,,,,
 allenso99w,1,SAC,21.0,11.0,0.0,2.0
 allenso99w,2,SAC,6.0,6.0,0.0,0.0
 bibbyhe01w,6,LAS,13.0,15.0,0.0,0.0
@@ -33,7 +32,6 @@ chancva99w,4,HOU,20.0,14.0,1.0,2.0
 chancva99w,5,HOU,13.0,21.0,0.0,0.0
 chancva99w,6,HOU,19.0,15.0,2.0,3.0
 chancva99w,7,HOU,18.0,16.0,0.0,2.0
-chatmda99w,11,CHI,,,,
 coopecy01w,2,PHO,13.0,19.0,0.0,0.0
 coopecy01w,3,PHO,6.0,4.0,0.0,0.0
 coopemi01w,1,LAS,28.0,4.0,2.0,2.0
@@ -68,16 +66,13 @@ dunnli99wc,2,SEA,10.0,22.0,0.0,0.0
 dunnli99wc,3,SEA,17.0,15.0,0.0,2.0
 dunnli99wc,9,IND,17.0,17.0,1.0,2.0
 dunnli99wc,10,IND,22.0,12.0,6.0,4.0
-dunnli99wc,11,IND,,,,
 dunntr01wc,1,CHA,8.0,24.0,0.0,0.0
 fortnne99w,2,IND,10.0,22.0,0.0,0.0
 fortnne99w,3,IND,16.0,16.0,1.0,2.0
 fortnne99w,4,IND,16.0,18.0,0.0,0.0
 gaineco01w,9,PHO,16.0,18.0,0.0,0.0
 gaineco01w,10,PHO,23.0,11.0,7.0,4.0
-gaineco01w,11,PHO,,,,
 gilloje01w,10,MIN,14.0,20.0,0.0,0.0
-gilloje01w,11,LAS,,,,
 grafca99wc,5,PHO,17.0,17.0,0.0,0.0
 grafca99wc,6,PHO,16.0,18.0,0.0,0.0
 hargrli99w,1,POR,10.0,22.0,0.0,0.0
@@ -95,7 +90,6 @@ hugheda99w,7,SAS,13.0,21.0,0.0,0.0
 hugheda99w,8,SAS,20.0,14.0,2.0,3.0
 hugheda99w,9,SAS,24.0,10.0,4.0,5.0
 hugheda99w,10,SAS,15.0,19.0,1.0,2.0
-hugheda99w,11,SAS,,,,
 jenkica99w,7,MIN,1.0,10.0,0.0,0.0
 kenlaje99w,9,WAS,2.0,10.0,0.0,0.0
 keyst99wc,9,CHI,12.0,22.0,0.0,0.0
@@ -103,7 +97,6 @@ keyst99wc,10,CHI,16.0,18.0,0.0,0.0
 laceytr99w,4,CHA,18.0,16.0,0.0,2.0
 laceytr99w,5,CHA,16.0,18.0,0.0,0.0
 laceytr99w,6,CHA,3.0,21.0,0.0,0.0
-laceytr99w,11,WAS,,,,
 laimbbi01w,3,DET,9.0,13.0,0.0,0.0
 laimbbi01w,4,DET,25.0,9.0,6.0,2.0
 laimbbi01w,5,DET,17.0,17.0,1.0,2.0
@@ -124,14 +117,11 @@ mchugma99w,3,SAC,14.0,18.0,0.0,0.0
 mchugma99w,4,SAC,7.0,11.0,0.0,0.0
 meadoma99w,9,ATL,4.0,30.0,0.0,0.0
 meadoma99w,10,ATL,18.0,16.0,0.0,2.0
-meadoma99w,11,ATL,,,,
 millech99w,1,PHO,20.0,12.0,0.0,2.0
 overtbo99w,8,CHI,14.0,20.0,0.0,0.0
 peckca99wc,1,ORL,16.0,16.0,1.0,2.0
 peckca99wc,2,ORL,13.0,19.0,0.0,0.0
 plankju99w,10,WAS,16.0,18.0,0.0,2.0
-reevech99w,11,MIN,,,,
-richano99w,11,TUL,,,,
 rollitr01w,8,WAS,16.0,14.0,0.0,0.0
 rollitr01w,9,WAS,8.0,14.0,0.0,0.0
 rothsro99w,1,MIA,13.0,19.0,0.0,0.0
@@ -148,7 +138,6 @@ thibami99w,7,CON,26.0,8.0,3.0,2.0
 thibami99w,8,CON,18.0,16.0,1.0,2.0
 thibami99w,9,CON,21.0,13.0,1.0,2.0
 thibami99w,10,CON,16.0,18.0,0.0,0.0
-thibami99w,11,CON,,,,
 thompka99w,5,LAS,11.0,3.0,1.0,2.0
 thompka99w,8,HOU,13.0,21.0,0.0,0.0
 thompka99w,9,HOU,17.0,17.0,0.0,0.0
@@ -162,7 +151,6 @@ whisejo99w,5,SAC,18.0,16.0,3.0,3.0
 whisejo99w,6,SAC,25.0,9.0,7.0,1.0
 whisejo99w,7,SAC,21.0,13.0,6.0,3.0
 whisejo99w,10,SAC,9.0,12.0,0.0,0.0
-whisejo99w,11,NYL,,,,
 willifr99w,1,UTA,18.0,14.0,0.0,0.0
 willifr99w,2,UTA,5.0,8.0,0.0,0.0
 willigr99w,2,DET,10.0,22.0,0.0,0.0
@@ -173,3 +161,15 @@ wintebr01w,7,IND,21.0,13.0,0.0,2.0
 wintebr01w,8,IND,21.0,13.0,3.0,3.0
 zierddo99w,8,MIN,10.0,24.0,0.0,0.0
 zierddo99w,9,MIN,16.0,18.0,0.0,0.0
+aglerbr99w,11,SEA,,,,
+chatmda99w,11,CHI,,,,
+dunnli99wc,11,IND,,,,
+gaineco01w,11,PHO,,,,
+gilloje01w,11,LAS,,,,
+hugheda99w,11,SAS,,,,
+laceytr99w,11,WAS,,,,
+meadoma99w,11,ATL,,,,
+reevech99w,11,MIN,,,,
+richano99w,11,TUL,,,,
+thibami99w,11,CON,,,,
+whisejo99w,11,NYL,,,,
