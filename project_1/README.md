@@ -1,14 +1,10 @@
 # WNBA Playoff Prediction – Project 1
 
----
-
 ## Overview
 
 This is **Project 1** of the WNBA playoff prediction work developed for the **Machine Learning (AC) course, MEIC 2024/25** at FEUP.  
 
 The goal is to **predict which teams will advance to the playoffs** in a given year using **historical WNBA data from the previous 10 seasons**. The project uses **classification models**, with the success criterion being a **precision greater than 75%**.
-
----
 
 ## Notebooks
 
