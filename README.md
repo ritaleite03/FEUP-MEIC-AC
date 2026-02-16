@@ -4,8 +4,6 @@
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 
----
-
 ## Contributors
 
 | Name           | GitHub Username                                          |
@@ -13,8 +11,6 @@
 | Henrique Silva | [@hfuturo](https://github.com/hfuturo)                  |
 | Rita Leite     | [@ritaleite03](https://github.com/ritaleite03)          |
 | Tiago Azevedo  | [@TiagoAzevedo1903](https://github.com/TiagoAzevedo1903)|
-
----
 
 ## Repository Overview
 
@@ -24,15 +20,11 @@ The project predicts **which teams will advance to the playoffs** in a given yea
 
 **Goal:** Build a classification model with **precision > 75%**, predicting playoff teams accurately.
 
----
-
 ## Grades
 
 | Project   | Final |
 | --------- | ----- |
 | Project 1 | 14.9  |
-
----
 
 ## Technologies
 
