@@ -4,7 +4,7 @@
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 
-## Contributors
+## 👥 Contributors
 
 | Name           | GitHub Username                                          |
 | -------------- | -------------------------------------------------------- |
@@ -12,24 +12,21 @@
 | Rita Leite     | [@ritaleite03](https://github.com/ritaleite03)          |
 | Tiago Azevedo  | [@TiagoAzevedo1903](https://github.com/TiagoAzevedo1903)|
 
-## Repository Overview
+## 📂 Projects Overview
 
-This repository contains the **WNBA playoff prediction project** developed for the **Machine Learning course (AC – MEIC 2024/25)**.  
+Repository for the **Aprendizagem Computacional (Machine Learning)** course projects from MEIC - FEUP.
 
-The project predicts **which teams will advance to the playoffs** in a given year using **10 years of historical WNBA data**.
+| Project                            | Description                                                              | Folder      |
+| ---------------------------------- | ------------------------------------------------------------------------ | ----------- |
+| WNBA Playoff Outcome Predictor | Predicts **which teams will advance to the playoffs** in a given year using **10 years of historical WNBA data**. | `project_1`|
 
-**Goal:** Build a classification model with **precision > 75%**, predicting playoff teams accurately.
 
-## Grades
+## 🏆 Grades
 
 | Project   | Final |
 | --------- | ----- |
 | Project 1 | 14.9  |
 
-## Technologies
+## ⚡ Quick Links
 
-| Component      | Technologies / Libraries                        |
-|----------------|------------------------------------------------|
-| Data Analysis  | Python, Pandas, NumPy                          |
-| Modeling       | Scikit-learn, Machine Learning, Classification |
-| Visualization  | Matplotlib, Seaborn, Jupyter Notebooks         |
+- [Project 1 README – WNBA Playoff Outcome Predictor](project_1/README.md)
